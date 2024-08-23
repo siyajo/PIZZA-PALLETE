@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Menu Order</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body id="menub">
+  <div id="containers">
+    <h1 id="mtitle">Pizza Menu</h1>
+      <div class="pizza">
+        <h2>Farmhouse Pizza</h2>
+        <img src="C:\Users\iamsi\Downloads\fourth sem web prog lab\unnamed.webp" alt="" id="piz">
+        <p>Classic pepperoni pizza with mozzarella cheese and tomato sauce.</p>
+        <span class="price">₹ 300</span>
+        <button onclick="addToCart('Farmhouse Pizza', 300)">Add to Cart</button><br>
+        <button onclick="removeCart('Farmhouse Pizza', 300)">Remove from Cart</button>
+      </div><br>
+      <div class="pizza">
+        <h2>Margherita Pizza</h2>
+        <img src="C:\Users\iamsi\Downloads\fourth sem web prog lab\download.jpeg" alt="" id="piz">
+        <p>Traditional margherita pizza with fresh mozzarella, tomatoes, and basil.</p>
+        <span class="price">₹ 200</span>
+        <button onclick="addToCart('Margherita Pizza', 200)">Add to Cart</button><br>
+        <button onclick="removeCart('Margherita Pizza', 200)">Remove from Cart</button>
+      </div><br>
+      <div class="pizza">
+        <h2>Tandoori Paneer Pizza</h2>
+        <img src="C:\Users\iamsi\Downloads\fourth sem web prog lab\avail-a-medium-size-tandoori-paneer-pizza-only-rs425-deal-img.jpg" alt="" id="piz">
+        <p>Hot and Spicy ,infused with Indian paneer,capsicum,red paprika and mint mayo.</p>
+        <span class="price">₹ 300</span>
+        <button onclick="addToCart('Tandoori Paneer Pizza', 300)">Add to Cart</button><br>
+        <button onclick="removeCart('Tandoori Paneer Pizza', 300)">Remove from Cart</button>
+      </div><br>
+      <div class="pizza">
+        <h2>Golden Corn Pizza</h2>
+        <img src="C:\Users\iamsi\Downloads\fourth sem web prog lab\BL2eaa8Y.jpeg" alt="" id="piz">
+        <p>Pizza perfectly baked with fresh dough and topped with crunchy sweet corn and tangy sauce</p>
+        <span class="price">₹ 200</span>
+        <button onclick="addToCart('Golden Corn Pizza', 200)">Add to Cart</button><br>
+        <button onclick="removeCart('Golden Corn Pizza', 200)">Remove from Cart</button>
+      </div><br>
+      <div class="pizza">
+        <h2>Chicken Pepperoni Pizza</h2>
+        <img src="C:\Users\iamsi\Downloads\fourth sem web prog lab\Homemade-Pepperoni-Pizza-1.webp" alt="" id="piz">
+        <p>Classic pepperoni pizza with mozzarella cheese and tomato sauce.</p>
+        <span class="price">₹ 400</span>
+        <button onclick="addToCart('Chicken Pepperoni Pizza', 400)">Add to Cart</button><br>
+        <button onclick="removeCart('Chicken Pepperoni Pizza', 400)">Remove from Cart</button>
+      </div><br>
+      <div class="pizza">
+        <h2>Barbecue Chicken Pizza</h2>
+        <img src="C:\Users\iamsi\Downloads\fourth sem web prog lab\download (1).jpeg" alt="" id="piz">
+        <p>Topped with grilled chicken, red onion, mushrooms, and BBQ sauce.</p>
+        <span class="price">₹ 300</span>
+        <button onclick="addToCart('Barbecue Chicken Pizza', 300)">Add to Cart</button><br>
+        <button onclick="removeCart('Barbecue Chicken Pizza', 300)">Remove from Cart</button>
+      </div><br>
+      <div class="pizza">
+        <h2>Chicken Fiesta Pizza</h2>
+        <img src="C:\Users\iamsi\Downloads\fourth sem web prog lab\e49d08b7-9c9a-4c38-9c2b-f668fecedfdc_PIZ5146.jpg" alt="" id="piz">
+        <p>Pizza that contains grilled chicken, peri-peri chicken, onion, and capsicum.</p>
+        <span class="price">₹ 400</span>
+        <button onclick="addToCart('Chicken Fiesta Pizza', 400)">Add to Cart</button><br>
+        <button onclick="removeCart('Chicken Fiesta Pizza', 400)">Remove from Cart</button>
+      </div><br>
+      <div class="pizza">
+        <form name="addrform">
+        <h2>Please Enter your address</h2>
+        <textarea id="address2" name="address"></textarea>
+      </form>
+      <button type="submit" id="#btn3" onclick="validateaddress(this.form)">Confirm address</button>
+      </div><br>
+    </div>
+    <form>
+    <div class="pizza"><h2>Cart</h2>
+    <div id="cart"><br></div></div><br>
+    <div class="pizza"><h2>Total</h2><h3 id="total"></h3></div><br>
+    <div class="pizza"><h2>Address:</h2><h3 id="youraddress"></h3></div><br>
+    <button id="resetbtn" onclick="resetcart()">Reset</button><br>
+    <button id="pay" onclick="payorder()">Pay</button>
+    </form>
+
+</body>
+</html>

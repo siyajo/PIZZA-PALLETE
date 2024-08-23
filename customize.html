@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize Your Pizza</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="cbody">
+  <form name="custform">
+    <h1>Customize Your Pizza</h1><br><br>
+    <table border="5px">
+      <thead>
+      <tr>
+        <th scope="col">Customization type</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Size of the Pizza</td>
+        <td>₹ 50</td>
+      </tr>
+      <tr>
+        <td>Type of crust</td>
+        <td>₹ 50</td>
+      </tr>
+      <tr>
+        <td>Toppings</td>
+        <td>₹ 50 each</td>
+      </tr>
+    </tbody>
+    </table><br><br>
+    <h2 id="ctitle">Choose Pizza Size:</h2>
+    <div id="size">
+      <label><input type="radio" name="size" class="size" value="Small" id="Small" onclick="sizePizza()"> Small</label><br>
+      <label><input type="radio" name="size" class="size" value="Medium" id="Medium" onclick="sizePizza()"> Medium</label><br>
+      <label><input type="radio" name="size" class="size" value="Large" id="Large" onclick="sizePizza()"> Large</label><br>
+    </div>
+    <h2 id="ctitle">Choose the type of crust:</h2>
+    <div id="crust">
+      <input type="radio" id="thin" name="crust" value="Thin crust" onclick="crustPizza()">
+      <label for="thin">Thin crust</label><br>
+      <input type="radio" id="new" name="crust" value="New Hand Tossed" onclick="crustPizza()">
+      <label for="thin">New Hand Tossed</label><br>
+      <input type="radio" id="pan" name="crust" value="Fresh pan pizza" onclick="crustPizza()">
+      <label for="thin">Fresh pan pizza</label><br>
+      <input type="radio" id="burst" name="crust" value="Cheese burst" onclick="crustPizza()">
+      <label for="thin">Cheese burst</label>
+    </div>
+    <h2 id="ctitle">Select Toppings:</h2>
+    <div id="toppings">
+      <input type="checkbox" id="cheese" name="topping" value="cheese" onclick="topPizza()">
+      <label for="cheese">Cheese</label><br>
+      <input type="checkbox" id="pepperoni" name="topping" value="pepperoni" onclick="topPizza()">
+      <label for="pepperoni">Pepperoni</label><br>
+      <input type="checkbox" id="mushrooms" name="topping" value="mushrooms" onclick="topPizza()">
+      <label for="mushrooms">Mushrooms</label><br>
+      <input type="checkbox" id="capsicum" name="topping" value="capsicum" onclick="topPizza()">
+      <label for="capsicum">Capsicum</label><br>
+      <input type="checkbox" id="olives" name="topping" value="olives" onclick="topPizza()">
+      <label for="olives">Olives</label><br>
+      <input type="checkbox" id="onion" name="topping" value="onion" onclick="topPizza()">
+      <label for="onion">Onion</label><br>
+      <input type="checkbox" id="paneer" name="topping" value="paneer" onclick="topPizza()">
+      <label for="paneer">Paneer</label><br>
+      <input type="checkbox" id="bbq" name="topping" value="bbq chicken" onclick="topPizza()">
+      <label for="bbq">Barbecue Chicken</label><br>
+      <input type="checkbox" id="peri" name="topping" value="peri-peri chicken" onclick="topPizza()">
+      <label for="peri">Peri Peri Chicken</label><br>
+    </div>
+  </div>
+  <h2 id="ctitle">Mention the spice level:</h2>
+  <div id="spice-level">
+    <select id="spice">
+      <option>--Select--</option>
+      <option>Mild</option>
+      <option>Medium</option>
+      <option>Hot</option>
+      <option>Extra hot</option>
+      <option>Extremely hot</option>
+    </select>
+  </div><br>
+  <label id="txtarea">Please enter your address:</label><br>
+  <textarea id="address" name="address"></textarea>
+  <button onclick="myfunc()" id="reset">Reset</button>
+</form><br>
+<button id="customize" onclick="spiceLevel(this.form)">Set Spice Level</button><br>
+<button id="customize" onclick="youraddress(this.form)">Set Address</button><br>
+<button id="customize" onclick="bill()">Show total</button><br>
+<div id="myorder">
+  <h2 id="myorder">Your Order:</h2><br>
+  <h3 id="order-title">Size of Pizza:</h3>
+  <h3 id="disps"></h3><br>
+  <h3 id="order-title">Type of Crust:</h3>
+  <h3 id="disp"></h3><br>
+  <h3 id="order-title">Toppings:</h3>
+  <h3 id="dispt1"></h3>
+  <h3 id="dispt2"></h3>
+  <h3 id="dispt3"></h3>
+  <h3 id="dispt4"></h3>
+  <h3 id="dispt5"></h3>
+  <h3 id="dispt6"></h3>
+  <h3 id="dispt7"></h3>
+  <h3 id="dispt8"></h3>
+  <h3 id="dispt9"></h3>
+  <h3 id="order-title">Spice Level:</h3>
+  <h3 id="spicylevel"></h3>
+  <h3 id="order-title">Address:</h3>
+  <h3 id="youraddress"></h3>
+  <h3 id="order-title">Total:</h3>
+  <h3 id="ctotal"></h3>
+  <h3 id="error"></h3>
+  <button id="pay" onclick="payorder()">Pay</button>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
